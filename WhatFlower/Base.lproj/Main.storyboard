@@ -16,17 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-7e-feu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-7e-feu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xaX-7e-feu" secondAttribute="height" multiplier="1:1" id="JwP-OH-Rh7"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aLF-fl-wsx">
+                                <rect key="frame" x="20" y="510" width="374" height="352"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="xaX-7e-feu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="11Q-mR-3Vc"/>
-                            <constraint firstItem="xaX-7e-feu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3RO-wO-UCB"/>
-                            <constraint firstAttribute="bottom" secondItem="xaX-7e-feu" secondAttribute="bottom" id="JN5-P2-Sy4"/>
-                            <constraint firstItem="xaX-7e-feu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yXN-i8-CL7"/>
+                            <constraint firstItem="aLF-fl-wsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0z9-78-fBw"/>
+                            <constraint firstItem="xaX-7e-feu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8E4-3P-KJc"/>
+                            <constraint firstItem="xaX-7e-feu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ScS-Hg-nQJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aLF-fl-wsx" secondAttribute="trailing" constant="20" id="VdM-d6-B4X"/>
+                            <constraint firstItem="xaX-7e-feu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yns-5J-wCx"/>
+                            <constraint firstItem="aLF-fl-wsx" firstAttribute="top" secondItem="xaX-7e-feu" secondAttribute="bottom" constant="8" id="i4o-qD-tLd"/>
+                            <constraint firstItem="aLF-fl-wsx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pSr-it-9CA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Rq-7K-aRd">
@@ -38,6 +50,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="xaX-7e-feu" id="I5S-uD-PEC"/>
+                        <outlet property="label" destination="aLF-fl-wsx" id="qgv-vf-84l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,6 +65,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bWQ-9B-d5k">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.091402761639999996" green="0.69456112380000001" blue="0.41954785589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -64,8 +78,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
